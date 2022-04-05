@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!-- Copyright 2010-2021 the original author or authors. Licensed under the 
+	Apache License, Version 2.0 (the "License"); you may not use this file except 
+	in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.mybatis</groupId>
+	<artifactId>jpetstore</artifactId>
+	<version>6.0.3-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>JPetStore Demo 6</name>
+	<url>http://www.mybatis.org</url>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-cdi</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.enterprise</groupId>
+			<artifactId>jakarta.enterprise.cdi-api</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.weld.se</groupId>
+			<artifactId>weld-se-core</artifactId>
+			<version>3.1.9.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.spec.javax.annotation</groupId>
+			<artifactId>jboss-annotations-api_1.3_spec</artifactId>
+			<version>2.0.1.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.200</version>
+		</dependency>
+
+		<!-- Test dependencies -->
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.36</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.8.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>${assertj.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.weld</groupId>
+			<artifactId>weld-junit5</artifactId>
+			<version>3.0.0.Final</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+
+	<properties>
+		<cargo.maven.containerId>tomcat${tomcat.major-version}x</cargo.maven.containerId>
+		<cargo.maven.containerUrl>https://archive.apache.org/dist/tomcat/tomcat-${tomcat.major-version}/v${tomcat.version}/bin/apache-tomcat-${tomcat.version}.zip</cargo.maven.containerUrl>
+		<tomcat.major-version />
+		<tomcat.version />
+
+		<surefire.version>3.0.0-M5</surefire.version>
+		<cargo-maven3-plugin.version>1.9.10</cargo-maven3-plugin.version>
+		<clirr.comparisonVersion>6.0.2</clirr.comparisonVersion>
+		<enforcer.skip>true</enforcer.skip>
+
+		<spring.version>5.3.18</spring.version>
+		<assertj.version>3.22.0</assertj.version>
+		<mockito.version>4.4.0</mockito.version>
+		<hsqldb.version>2.5.2</hsqldb.version>
+		<module.name>org.mybatis.jpetstore</module.name>
+		<project.build.outputTimestamp>1645112687</project.build.outputTimestamp>
+	</properties>
+
+</project>
